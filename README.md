@@ -1,24 +1,11 @@
-<p align="center">
-  <img src="assets/dysen_readme_logo.png" alt="DYSEN System UI" width="420">
-</p>
-<p align="center">
-  <strong>A terminal-first Linux interface for people who live in the command line.</strong>
-</p>
-<p align="center">
-  Organize terminals. Navigate projects. Explore your system. Customize your workspace.<br>
-  And build with NEXUS, DYSEN's inbuilt AI assistant.
-</p>
-<p align="center">
-  <a href="https://github.com/harshitn06/DYSEN_UI">GitHub</a>
-</p>
-<p align="center">
-  <a href="#first-time-using-dysen">Quick Start</a> ·
-  <a href="#dysen-panels">Panels</a> ·
-  <a href="#globe-explorer">Globe</a> ·
-  <a href="#dysen-sound-system">Sounds</a> ·
-  <a href="#nexus">NEXUS</a> ·
-  <a href="#roadmap">Roadmap</a>
-</p>
+<div align="center">
+<img src="assets/dysen_readme_logo.png" alt="DYSEN System UI" width="420">
+A terminal-first Linux interface for people who live in the command line.
+Organize terminals. Navigate projects. Explore your system. Customize your workspace.  
+And build with NEXUS, DYSEN's inbuilt AI assistant.
+GitHub Repository
+Quick Start · Panels · Globe · Sounds · NEXUS · Roadmap
+</div>
 ---
 DYSEN
 DYSEN is a terminal-first Linux UI designed to make powerful terminal workflows feel more organized, visual, accessible, and human-friendly.
@@ -30,23 +17,23 @@ It is a work-in-progress terminal-first Linux environment for people who spend r
 ---
 ✦ What Makes DYSEN Different?
 A normal Linux workflow can involve jumping between:
+Terminal → File Manager → Project Directory → System Monitor → Browser / AI → Settings → More Terminal Windows
 DYSEN explores a more connected workflow:
+Terminal + Files + System + Globe + Customization + NEXUS → One workspace
 The interface is designed around the idea of keeping useful tools close to the work instead of treating every workflow as a separate application.
 ---
 🧠 DYSEN Mindmap
 The DYSEN mindmap gives a quick visual overview of the product, its major interface layers, and the direction of the platform.
 <div align="center">
-  <img src="assets/DYSEN_mindmap.png" alt="DYSEN Mindmap — product and interface overview" width="900">
-  <p><em>DYSEN product and interface overview — how the major pieces fit together.</em></p>
+<img src="assets/DYSEN_mindmap.png" alt="DYSEN product and interface mindmap" width="900">
+<sub><strong>DYSEN product and interface overview — how the major pieces fit together.</strong></sub>
 </div>
 It connects the main parts of DYSEN — the terminal-first interface, workspace and panel system, system tools, Globe Explorer, customization, sounds, files, and the NEXUS AI layer — into one product view.
 ---
 🚀 Current Status
 > **Development status:** Active WIP — the public repository represents the current development baseline.
-DYSEN is actively under development.
-The GitHub repository represents the current public development baseline.
-Some components are already usable, while other components are still experimental or being rebuilt.
-The current development focus includes:
+DYSEN is actively under development. Some components are already usable, while other components are still experimental or being rebuilt.
+Current development focus
 DYSEN core UI
 Terminal workflows
 Panel system
@@ -63,14 +50,49 @@ Permission-aware AI actions
 ⚡ First Time Using DYSEN
 1. Open your terminal
 First go to your home directory:
+```bash
+cd ~
+```
 Your Linux home directory normally looks like:
+```text
+/home/your-username
+```
 2. Enter DYSEN
 For a local development checkout:
+```bash
+cd ~/DYSEN_UI
+```
 3. Start DYSEN
+```bash
+./start.sh
+```
 DYSEN will launch its full-screen interface.
 ---
 🧭 Basic DYSEN Workflow
 A typical session can look like:
+```text
+Launch DYSEN
+     ↓
+Choose / arrange your workspace
+     ↓
+Open Terminal
+     ↓
+cd ~
+     ↓
+Navigate to your project
+     ↓
+Open Files / Project access
+     ↓
+Use system panels
+     ↓
+Explore the Globe
+     ↓
+Customize theme and sound
+     ↓
+Ask NEXUS for help
+     ↓
+Continue working
+```
 The goal is to keep the workflow inside one coherent environment.
 ---
 ✦ Feature Snapshot
@@ -101,12 +123,31 @@ Panels are designed to be arranged around the task you are doing.
 🖱️ Dragging Panels
 Supported panels can be dragged using their header.
 Basic interaction:
+Click and hold the panel header → Drag → Release
 This lets you build your own workspace layout instead of being locked into a single arrangement.
 ---
 ↔️ Resizing Panels
 Supported panels can be resized.
 This makes it possible to create layouts such as:
+```text
+┌───────────────────────┬───────────────┐
+│                       │               │
+│       TERMINAL        │    SYSTEM     │
+│                       │               │
+├───────────────────────┴───────────────┤
+│              FILES / PROJECT          │
+└───────────────────────────────────────┘
+```
 or:
+```text
+┌───────────────────────────────────────┐
+│                 GLOBE                 │
+│                                       │
+├───────────────────────┬───────────────┤
+│       TERMINAL        │     FILES     │
+│                       │               │
+└───────────────────────┴───────────────┘
+```
 The exact layout depends on the current DYSEN build.
 ---
 ⬛ Double-Click Panel Headers
@@ -115,14 +156,13 @@ On panels where maximize behavior is enabled:
 Double-click the panel header to maximize it.
 Double-click again to restore the previous layout.
 This makes it possible to switch quickly between:
+Normal panel ↔ Full workspace
 Not every panel uses the same behavior.
-Some panels intentionally disable maximize behavior because their interaction is designed to remain independent.
-For example, the virtual keyboard does not use terminal-style maximize/focus behavior.
+Some panels intentionally disable maximize behavior because their interaction is designed to remain independent. For example, the virtual keyboard does not use terminal-style maximize/focus behavior.
 ---
 ⌨️ Terminal
 The terminal remains the heart of DYSEN.
-DYSEN is not trying to hide the command line.
-It is trying to make terminal-first work easier to organize.
+DYSEN is not trying to hide the command line. It is trying to make terminal-first work easier to organize.
 The terminal supports the development workflow around:
 Physical keyboard input
 Virtual keyboard input
@@ -132,7 +172,13 @@ Clipboard interaction
 Shell commands
 Terminal sound feedback
 Example:
+```bash
+cd ~
+```
 Then:
+```bash
+cd ~/your-project
+```
 and continue working normally.
 ---
 ⌨️ Physical Keyboard
@@ -149,8 +195,20 @@ The virtual keyboard remains an independent panel.
 ---
 📁 Files & Project Access
 DYSEN includes integrated file/project access.
-The purpose is to reduce the repeated switching between:
+The purpose is to reduce repeated switching between:
+Terminal ↔ File Manager ↔ Project Directory
 A typical workflow can be:
+```text
+Open Files
+     ↓
+Find project
+     ↓
+Open Terminal
+     ↓
+cd into project
+     ↓
+Work normally
+```
 DYSEN's file layer is intended to make frequently used folders and projects easier to access from the same environment.
 ---
 🌍 Globe Explorer
@@ -183,16 +241,30 @@ Day / night state
 The available data depends on the selected geographic area and current data sources.
 Close Globe View
 Press:
+```text
+Esc
+```
 to leave the active explorer view.
 ---
 🌎 Globe Data
 The Globe uses local geographic data under:
+```text
+data/earth/
+```
 The current project contains country and regional datasets used by DYSEN's geographic components.
 The runtime uses optimized representations for different Globe rendering and interaction needs.
 ---
 🎨 Themes
 DYSEN treats visual identity as part of the interface.
 The current project includes theme/accent assets such as:
+Amber
+Blue
+Cyan
+Green
+Pink
+Red
+Violet
+White
 Theme support is intended to affect more than one isolated widget.
 The visual system can influence:
 Panel accents
@@ -211,11 +283,15 @@ Background music state
 Background music volume
 Visual preferences
 When supported by the current build, settings can be opened with:
+```text
+Ctrl + ,
+```
 DYSEN is designed so that normal users can use the settings layer instead of manually editing internal project files.
 ---
 🔊 DYSEN Sound System
 Sound is part of the DYSEN interface experience.
 Audio is used as:
+Interaction → Feedback → Atmosphere
 The sound system includes different categories.
 Startup Sounds
 Startup audio can be used for stages such as:
@@ -258,6 +334,9 @@ Expand
 DYSEN includes ambient background music.
 Multiple BGM variants are included for visual themes.
 BGM can be controlled through the settings system:
+BGM ON
+BGM OFF
+Volume
 The goal is for music and sound to support the atmosphere without becoming mandatory.
 ---
 🧠 NEXUS
@@ -265,6 +344,25 @@ NEXUS is DYSEN's inbuilt AI assistant.
 It is one of the most important long-term parts of the product.
 NEXUS is being designed specifically around the DYSEN environment rather than as a separate generic chat window.
 The goal is:
+```text
+Developer encounters a problem
+            ↓
+Ask NEXUS
+            ↓
+NEXUS understands exposed DYSEN context
+            ↓
+Explain
+            ↓
+Guide
+            ↓
+Help with code / debugging
+            ↓
+Propose an action when appropriate
+            ↓
+User reviews it
+            ↓
+User decides
+```
 ---
 🤖 What NEXUS Is Designed To Do
 Explain
@@ -278,6 +376,7 @@ Configuration problems
 Guide
 NEXUS can turn goals into understandable steps.
 For example:
+> "Help me set up this project."
 can become a structured workflow instead of a confusing wall of commands.
 Coding Assistance
 NEXUS is intended to assist with:
@@ -307,12 +406,34 @@ The architecture is intentionally designed around explicit context, not unrestri
 🛡️ Permission-Based AI Actions
 NEXUS should not become an unrestricted command executor.
 The intended future flow is:
+```text
+User request
+     ↓
+NEXUS understands request
+     ↓
+NEXUS proposes an action
+     ↓
+DYSEN shows what will happen
+     ↓
+User explicitly approves
+     ↓
+Allowed action executes
+     ↓
+DYSEN reports the actual result
+```
 The user remains the final decision-maker.
 NEXUS should never claim that something was executed unless DYSEN actually reports a successful execution.
 ---
 🔐 Security
 Never commit secrets to the public repository.
 Do not put these into Git:
+API keys
+Passwords
+Access tokens
+Private keys
+Provider credentials
+Billing credentials
+Secret `.env` files
 NEXUS service credentials should stay outside the public source repository.
 The long-term security model is based around:
 Least privilege
@@ -324,16 +445,78 @@ Real result reporting
 ---
 🧱 Project Architecture
 At a high level:
+```text
+                    DYSEN
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+        ▼                           ▼
+      QML UI                  Python Backend
+        │                           │
+        │              ┌────────────┼────────────┐
+        │              ▼            ▼            ▼
+        │          Terminal      System        Files
+        │
+        └──────────────────────┐
+                               ▼
+                             NEXUS
+                               │
+                 ┌─────────────┼─────────────┐
+                 ▼             ▼             ▼
+              Context      AI Provider    Actions
+```
 NEXUS will remain separated from the core UI so the product can continue functioning when the AI service is unavailable.
 ---
 📂 Repository Structure
-Important areas:
+```text
+DYSEN_UI/
+│
+├── apps/
+├── assets/
+│   ├── sounds/
+│   └── themes/
+│
+├── backend/
+├── core/
+├── data/
+│   └── earth/
+│
+├── plugins/
+├── qml/
+├── runtime/
+├── scripts/
+│
+├── main.py
+├── pyproject.toml
+├── requirements.txt
+└── start.sh
+```
+Important areas
+Path	Purpose
+`qml/`	DYSEN visual interface
+`backend/`	System and application logic
+`assets/`	Logos, sounds and theme assets
+`data/earth/`	Geographic data
+`scripts/`	Development and utility scripts
+`runtime/`	Runtime configuration
 ---
 🛠️ Developer Setup
 Clone the repository:
+```bash
+git clone https://github.com/harshitn06/DYSEN_UI.git
+```
 Enter it:
+```bash
+cd DYSEN_UI
+```
 Install dependencies:
+```bash
+python3 -m pip install -r requirements.txt
+```
 Run:
+```bash
+./start.sh
+```
 ---
 📖 User Manual
 The detailed DYSEN manual should cover:
@@ -449,7 +632,7 @@ Makers
 Terminal-focused users
 ---
 🔒 Repository & Ownership
-Official repository:
+Official repository:  
 https://github.com/harshitn06/DYSEN_UI
 The official repository is public so people can view the project, follow development, test the software, and inspect the implementation.
 Official repository write access remains controlled by the project maintainer.
@@ -462,4 +645,6 @@ It is becoming a larger idea:
 > **A Linux terminal environment where the interface organizes the work and NEXUS helps the user understand it.**
 The project is still being built.
 The current public repository is the beginning of the next stage.
----
+<div align="center">
+DYSEN — Linux, but organized around the way you work.
+</div>
