@@ -1,6 +1,5 @@
-
 <p align="center">
-  <img src="assets/dysen_logo.svg" alt="DYSEN" width="420">
+  <img src="assets/dysen_readme_logo.png" alt="DYSEN System UI" width="420">
 </p>
 
 <p align="center">
@@ -38,37 +37,7 @@ It is a work-in-progress terminal-first Linux environment for people who spend r
 
 A normal Linux workflow can involve jumping between:
 
-```text
-Terminal
-   ↓
-File Manager
-   ↓
-Project Directory
-   ↓
-System Monitor
-   ↓
-Browser / AI
-   ↓
-Settings
-   ↓
-More Terminal Windows
-```
-
 DYSEN explores a more connected workflow:
-
-```text
-                    ┌───────────────┐
-                    │    DYSEN      │
-                    └───────┬───────┘
-                            │
-       ┌──────────┬─────────┼─────────┬──────────┐
-       ▼          ▼         ▼         ▼          ▼
-   Terminal    Files     System     Globe      NEXUS
-       │          │         │         │          │
-       └──────────┴─────────┴─────────┴──────────┘
-                            │
-                       One workspace
-```
 
 The interface is designed around the idea of keeping useful tools close to the work instead of treating every workflow as a separate application.
 
@@ -105,29 +74,13 @@ The current development focus includes:
 
 First go to your home directory:
 
-```bash
-cd ~
-```
-
 Your Linux home directory normally looks like:
-
-```text
-/home/your-username
-```
 
 ## 2. Enter DYSEN
 
 For a local development checkout:
 
-```bash
-cd ~/DYSEN_UI
-```
-
 ## 3. Start DYSEN
-
-```bash
-./start.sh
-```
 
 DYSEN will launch its full-screen interface.
 
@@ -136,30 +89,6 @@ DYSEN will launch its full-screen interface.
 # 🧭 Basic DYSEN Workflow
 
 A typical session can look like:
-
-```text
-Launch DYSEN
-     ↓
-Choose / arrange your workspace
-     ↓
-Open Terminal
-     ↓
-cd ~
-     ↓
-Navigate to your project
-     ↓
-Open Files / Project access
-     ↓
-Use system panels
-     ↓
-Explore the Globe
-     ↓
-Customize theme and sound
-     ↓
-Ask NEXUS for help
-     ↓
-Continue working
-```
 
 The goal is to keep the workflow inside one coherent environment.
 
@@ -191,14 +120,6 @@ Supported panels can be dragged using their header.
 
 Basic interaction:
 
-```text
-Click and hold panel header
-          ↓
-Drag
-          ↓
-Release
-```
-
 This lets you build your own workspace layout instead of being locked into a single arrangement.
 
 ---
@@ -209,28 +130,7 @@ Supported panels can be resized.
 
 This makes it possible to create layouts such as:
 
-```text
-┌───────────────────────┬───────────────┐
-│                       │               │
-│       TERMINAL        │    SYSTEM     │
-│                       │               │
-│                       │               │
-├───────────────────────┴───────────────┤
-│              FILES / PROJECT          │
-└───────────────────────────────────────┘
-```
-
 or:
-
-```text
-┌───────────────────────────────────────┐
-│                 GLOBE                 │
-│                                       │
-├───────────────────────┬───────────────┤
-│       TERMINAL        │     FILES     │
-│                       │               │
-└───────────────────────┴───────────────┘
-```
 
 The exact layout depends on the current DYSEN build.
 
@@ -247,12 +147,6 @@ On panels where maximize behavior is enabled:
 Double-click again to restore the previous layout.
 
 This makes it possible to switch quickly between:
-
-```text
-Normal panel
-     ↕
-Full workspace
-```
 
 Not every panel uses the same behavior.
 
@@ -282,15 +176,7 @@ The terminal supports the development workflow around:
 
 Example:
 
-```bash
-cd ~
-```
-
 Then:
-
-```bash
-cd ~/your-project
-```
 
 and continue working normally.
 
@@ -324,27 +210,7 @@ DYSEN includes integrated file/project access.
 
 The purpose is to reduce the repeated switching between:
 
-```text
-Terminal
-   ↕
-File Manager
-   ↕
-Project Directory
-```
-
 A typical workflow can be:
-
-```text
-Open Files
-     ↓
-Find project
-     ↓
-Open Terminal
-     ↓
-cd into project
-     ↓
-Work normally
-```
 
 DYSEN's file layer is intended to make frequently used folders and projects easier to access from the same environment.
 
@@ -402,10 +268,6 @@ The available data depends on the selected geographic area and current data sour
 
 Press:
 
-```text
-Esc
-```
-
 to leave the active explorer view.
 
 ---
@@ -413,10 +275,6 @@ to leave the active explorer view.
 # 🌎 Globe Data
 
 The Globe uses local geographic data under:
-
-```text
-data/earth/
-```
 
 The current project contains country and regional datasets used by DYSEN's geographic components.
 
@@ -429,17 +287,6 @@ The runtime uses optimized representations for different Globe rendering and int
 DYSEN treats visual identity as part of the interface.
 
 The current project includes theme/accent assets such as:
-
-```text
-Amber
-Blue
-Cyan
-Green
-Pink
-Red
-Violet
-White
-```
 
 Theme support is intended to affect more than one isolated widget.
 
@@ -469,10 +316,6 @@ Current configuration areas include preferences such as:
 
 When supported by the current build, settings can be opened with:
 
-```text
-Ctrl + ,
-```
-
 DYSEN is designed so that normal users can use the settings layer instead of manually editing internal project files.
 
 ---
@@ -482,14 +325,6 @@ DYSEN is designed so that normal users can use the settings layer instead of man
 Sound is part of the DYSEN interface experience.
 
 Audio is used as:
-
-```text
-Interaction
-     ↓
-Feedback
-     ↓
-Atmosphere
-```
 
 The sound system includes different categories.
 
@@ -551,12 +386,6 @@ Multiple BGM variants are included for visual themes.
 
 BGM can be controlled through the settings system:
 
-```text
-BGM ON
-BGM OFF
-Volume
-```
-
 The goal is for music and sound to support the atmosphere without becoming mandatory.
 
 ---
@@ -570,26 +399,6 @@ It is one of the most important long-term parts of the product.
 NEXUS is being designed specifically around the DYSEN environment rather than as a separate generic chat window.
 
 The goal is:
-
-```text
-Developer encounters a problem
-            ↓
-Ask NEXUS
-            ↓
-NEXUS understands exposed DYSEN context
-            ↓
-Explain
-            ↓
-Guide
-            ↓
-Help with code / debugging
-            ↓
-Propose an action when appropriate
-            ↓
-User reviews it
-            ↓
-User decides
-```
 
 ---
 
@@ -611,10 +420,6 @@ NEXUS can be designed to explain:
 NEXUS can turn goals into understandable steps.
 
 For example:
-
-```text
-"Help me set up this project."
-```
 
 can become a structured workflow instead of a confusing wall of commands.
 
@@ -662,22 +467,6 @@ NEXUS should not become an unrestricted command executor.
 
 The intended future flow is:
 
-```text
-User request
-     ↓
-NEXUS understands request
-     ↓
-NEXUS proposes an action
-     ↓
-DYSEN shows what will happen
-     ↓
-User explicitly approves
-     ↓
-Allowed action executes
-     ↓
-DYSEN reports the actual result
-```
-
 The user remains the final decision-maker.
 
 NEXUS should never claim that something was executed unless DYSEN actually reports a successful execution.
@@ -689,16 +478,6 @@ NEXUS should never claim that something was executed unless DYSEN actually repor
 Never commit secrets to the public repository.
 
 Do not put these into Git:
-
-```text
-API keys
-Passwords
-Access tokens
-Private keys
-Provider credentials
-Billing credentials
-Secret .env files
-```
 
 NEXUS service credentials should stay outside the public source repository.
 
@@ -717,78 +496,13 @@ The long-term security model is based around:
 
 At a high level:
 
-```text
-                    DYSEN
-                      │
-        ┌─────────────┴─────────────┐
-        │                           │
-        ▼                           ▼
-      QML UI                  Python Backend
-        │                           │
-        │              ┌────────────┼────────────┐
-        │              ▼            ▼            ▼
-        │          Terminal      System        Files
-        │
-        └──────────────────────┐
-                               ▼
-                             NEXUS
-                               │
-                 ┌─────────────┼─────────────┐
-                 ▼             ▼             ▼
-              Context      AI Provider    Actions
-```
-
 NEXUS will remain separated from the core UI so the product can continue functioning when the AI service is unavailable.
 
 ---
 
 # 📂 Repository Structure
 
-```text
-DYSEN_UI/
-│
-├── apps/
-├── assets/
-│   ├── sounds/
-│   └── themes/
-│
-├── backend/
-├── core/
-├── data/
-│   └── earth/
-│
-├── plugins/
-├── qml/
-├── runtime/
-├── scripts/
-│
-├── main.py
-├── pyproject.toml
-├── requirements.txt
-└── start.sh
-```
-
 Important areas:
-
-```text
-qml/
-    DYSEN visual interface
-
-backend/
-    system and application logic
-
-assets/
-    logos, sounds, theme assets
-
-data/earth/
-    geographic data
-
-scripts/
-    development and utility scripts
-
-runtime/
-    runtime configuration
-```
 
 ---
 
@@ -796,27 +510,11 @@ runtime/
 
 Clone the repository:
 
-```bash
-git clone https://github.com/harshitn06/DYSEN_UI.git
-```
-
 Enter it:
-
-```bash
-cd DYSEN_UI
-```
 
 Install dependencies:
 
-```bash
-python3 -m pip install -r requirements.txt
-```
-
 Run:
-
-```bash
-./start.sh
-```
 
 ---
 
