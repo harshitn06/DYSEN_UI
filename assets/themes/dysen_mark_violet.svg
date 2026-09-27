@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="512"
+     height="512"
+     viewBox="0 0 512 512">
+
+    <path
+        fill="#7EF3FF"
+        d="
+        M78 52
+        H286
+        L428 136
+        V376
+        L286 460
+        H78
+        L150 348
+        H244
+        L318 306
+        V206
+        L244 164
+        H150
+        Z
+        " />
+
+    <path
+        fill="#071116"
+        d="
+        M171 205
+        H232
+        L302 245
+        V267
+        L232 307
+        H171
+        L233 267
+        L171 225
+        Z
+        " />
+
+    <path
+        fill="#A78BFA"
+        d="
+        M98 67
+        H126
+        V445
+        H98
+        Z
+        "
+        opacity="0.9" />
+</svg>

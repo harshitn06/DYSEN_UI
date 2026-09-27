@@ -1,0 +1,47 @@
+__pycache__/
+*.py[cod]
+*.so
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.venv/
+venv/
+env/
+
+build/
+dist/
+*.egg-info/
+
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+.vscode/
+.idea/
+
+backups/
+backup_stage1/
+
+# Local development backups
+*.bak
+*.bak_*
+*.backup
+*.prev
+*.before_*
+*.broken_*
+
+# Local editor / OS files
+*~
+*.orig
+.DS_Store
+Thumbs.db
+
+# Local DYSEN state
+*.local
+*.session
+
+# Development backup variants
+*.backup_*

@@ -1,0 +1,7 @@
+{
+    "id": "hello",
+    "name": "Hello Plugin",
+    "version": "0.1.0",
+    "description": "DYSEN plugin system test",
+    "entry": "plugin.py"
+}
